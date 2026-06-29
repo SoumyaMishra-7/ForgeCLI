@@ -1,0 +1,21 @@
+{
+  "name": "forgecli",
+  "version": "1.0.0",
+  "description": "Deploy. Scale. Monitor — From Your Terminal.",
+  "main": "src/index.js",
+  "bin": {
+    "forge": "./bin/forge.js"
+  },
+  "scripts": {
+    "start": "node bin/forge.js",
+    "dev": "node bin/forge.js",
+    "forge": "node bin/forge.js"
+  },
+  "keywords": ["cli", "devops", "deployment", "monitoring", "scaffolding"],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "inquirer": "^8.2.6"
+  }
+}

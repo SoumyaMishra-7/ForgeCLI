@@ -53,16 +53,40 @@ ForgeCLI simplifies modern deployment systems through an intuitive terminal-firs
 - Secure deployments
 - Authentication-ready architecture
 
+### 🎯 Interactive Project Generator
+
+- **Interactive template selection** — Browse and select from multiple project templates using an intuitive CLI menu
+- **Template categories** — Templates grouped by category (Backend, Frontend, Full Stack, DevOps, Tooling)
+- **Rich template descriptions** — View tech stack, tags, and detailed descriptions before selecting
+- **Input validation** — Project names, directories, and template selections validated in real-time
+- **Non-interactive mode** — Skip prompts with `--template` flag for scripting/automation
+- **Project scaffolding** — Automatically generates project files, directories, and boilerplate code
+- **6 built-in templates** — Node.js Express API, React Frontend, Next.js Full Stack, Python Flask API, Dockerized Node.js, CLI Tool
+
 ---
 
 ## 🛠 Example Workflow
 
-> **Initialize Project**
+> **Initialize Project (Interactive)**
 > 
 > ```bash
 > forge init
 > ```
 > 
+> Launches an interactive prompt where you select a template, enter a project name, and confirm the target directory — all with real-time validation and rich descriptions.
+>
+> **Initialize Project (Quick — Skip Prompts)**
+>
+> ```bash
+> forge init my-api --template node-express-api
+> ```
+>
+> **List All Available Templates**
+>
+> ```bash
+> forge templates
+> ```
+>
 > **Deploy Application**
 > 
 > ```bash
@@ -199,6 +223,13 @@ npm run dev
 ```
 ForgeCLI/
 │
+├── bin/                  # CLI entry point
+├── src/                  # Source code
+│   ├── index.js          # Main logic (non-interactive init)
+│   ├── templates.js      # Template definitions (6 templates)
+│   ├── selector.js       # Interactive template selector
+│   ├── validator.js      # Input validation utilities
+│   └── generator.js      # Project scaffolding engine
 ├── apps/
 │   ├── cli/
 │   ├── api-server/
